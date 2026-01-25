@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Sound Catalog</h1>
+        <p class="subtitle">Plugins and sample library browser</p>
+      </div>
+      <div class="actions">
+        <button id="export-notes" class="button">Download Notes</button>
+        <label class="button button-secondary">
+          Import Notes
+          <input id="import-notes" type="file" accept="application/json" hidden />
+        </label>
+        <button id="reset-notes" class="button button-secondary">Reset Notes</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Plugins</h2>
+          <input id="plugin-search" type="search" placeholder="Search plugins..." />
+        </div>
+        <ul id="plugin-list" class="list"></ul>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Samples</h2>
+          <input id="sample-search" type="search" placeholder="Search samples..." />
+        </div>
+        <div id="sample-tree" class="tree"></div>
+      </section>
+
+      <section class="panel details">
+        <div class="panel-header">
+          <h2>Details</h2>
+        </div>
+        <div id="details-empty" class="empty-state">
+          Select a plugin or sample to edit notes.
+        </div>
+        <form id="details-form" class="details-form" hidden>
+          <div class="field">
+            <label for="item-name">Name / Path</label>
+            <input id="item-name" type="text" disabled />
+          </div>
+          <div class="field">
+            <label for="item-type">Type</label>
+            <input id="item-type" type="text" disabled />
+          </div>
+          <div class="field">
+            <label for="item-description">Description</label>
+            <textarea id="item-description" rows="5" placeholder="Add a description..."></textarea>
+          </div>
+          <div class="field">
+            <label for="item-tags">Tags (comma separated)</label>
+            <input id="item-tags" type="text" placeholder="drums, analog, lo-fi" />
+          </div>
+          <div class="field">
+            <label for="item-meta">Meta (read-only)</label>
+            <textarea id="item-meta" rows="5" disabled></textarea>
+          </div>
+          <div class="field">
+            <button id="save-notes" type="submit" class="button">Save to Browser</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Notes are stored in your browser (localStorage). Use "Download Notes" to save a JSON file.
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
