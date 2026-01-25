@@ -1,0 +1,29 @@
+{
+  "generated_at": "2025-01-25T00:00:00Z",
+  "sources": [
+    "/Library/Audio/Plug-Ins/VST3",
+    "/Library/Audio/Plug-Ins/Components",
+    "~/Library/Audio/Plug-Ins/VST3",
+    "~/Library/Audio/Plug-Ins/Components"
+  ],
+  "plugins": [
+    {
+      "name": "Example Synth",
+      "type": "vst3",
+      "vendor": "Vendor Name",
+      "description": "",
+      "tags": ["synth", "analog"],
+      "path": "/Library/Audio/Plug-Ins/VST3/Example Synth.vst3",
+      "added_at": "2025-01-25T00:00:00Z"
+    },
+    {
+      "name": "Example Reverb",
+      "type": "au",
+      "vendor": "Vendor Name",
+      "description": "",
+      "tags": ["reverb", "space"],
+      "path": "/Library/Audio/Plug-Ins/Components/Example Reverb.component",
+      "added_at": "2025-01-25T00:00:00Z"
+    }
+  ]
+}

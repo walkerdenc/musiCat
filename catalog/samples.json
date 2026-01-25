@@ -1,0 +1,29 @@
+{
+  "generated_at": "2025-01-25T00:00:00Z",
+  "roots": [
+    "/Volumes/External SSD/Sample Kits",
+    "/Volumes/External SSD/Samples Local"
+  ],
+  "nodes": [
+    {
+      "path": "Drums/Acoustic/Kit A",
+      "description": "",
+      "tags": ["drums", "acoustic"]
+    },
+    {
+      "path": "Drums/Electronic/Kit B",
+      "description": "",
+      "tags": ["drums", "electronic"]
+    },
+    {
+      "path": "Synths/Analog/Leads",
+      "description": "",
+      "tags": ["synth", "lead"]
+    },
+    {
+      "path": "Textures/Field/City Night",
+      "description": "",
+      "tags": ["texture", "field"]
+    }
+  ]
+}
