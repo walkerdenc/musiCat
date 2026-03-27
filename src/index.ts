@@ -23,3 +23,4 @@ process.on("SIGTERM", () => {
 });
 
 export { WakeMac, onPlaybackStarted, onPlaybackStopped };
+export { wakeMac } from "./wakeOnLan";

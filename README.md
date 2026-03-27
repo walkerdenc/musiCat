@@ -26,3 +26,28 @@ console.log(wakeMac.isActive()); // true / false
 ### How it works
 
 `WakeMac` spawns a `caffeinate -i -d -s` child process when music starts playing and terminates it when playback stops. It is a no-op on non-macOS platforms.
+
+## Wake My Mac (Wake-on-LAN)
+
+The **Wake My Mac** feature sends a Wake-on-LAN magic packet over UDP to wake a sleeping Mac on your local network.
+
+> **Prerequisite:** Enable "Wake for network access" in System Settings → Energy on the target Mac.
+
+### Usage
+
+```typescript
+import { wakeMac } from "./src/wakeOnLan";
+
+// Wake the Mac with the given MAC address
+await wakeMac("AA:BB:CC:DD:EE:FF");
+
+// Optionally specify a subnet broadcast address and port
+await wakeMac("AA:BB:CC:DD:EE:FF", {
+  broadcastAddress: "192.168.1.255",
+  port: 9,
+});
+```
+
+### How it works
+
+`wakeMac` builds a 102-byte magic packet (6×`0xFF` + 16 repetitions of the target MAC address) and broadcasts it via UDP. The sleeping Mac's network adapter recognises the packet and powers the machine on.
